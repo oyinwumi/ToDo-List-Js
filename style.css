@@ -14,6 +14,55 @@ body{
     margin: 0 auto;
     padding: 20px;
 }
+.nav-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+.logo h1{
+    font-size: 25px;
+}
+.nav-link ul{
+    display: flex;
+}
+.nav-link li{
+    list-style: none;
+}
+.nav-link li a{
+    text-decoration: none;
+    padding: 0.75rem;
+    align-items: center;
+    display: block;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.nav-link li a:hover{
+    background-color: #FFFFFF;
+    color:  rgb(28, 28, 123);
+}
+.toggle-button{
+    position: absolute;
+    top: .5rem;
+   right: 1rem;
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 30px;
+    height: 21px;
+
+}
+.toggle-button .bar{
+    width: 100%;
+    height: 3px;
+   background-color: #FFFFFF;
+    align-items: center;
+    border-radius: 10px;
+}
+
+
+
 #inputField{
     width: 60%;
     height: 40px;
@@ -46,9 +95,45 @@ body{
   text-transform: capitalize;
 list-style: upper-roman;
 }
+/* .to-dos{
+    background-image: url(./image/xmark-solid.svg);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position:right ;
+    color: #FFFFFF;
+} */
+
+
 @media (max-width:500px) {
     .container{
         width: 100%;
         height: 100%;
+    }
+    .toggle-button{
+        display: flex;
+    }
+    .nav-link{
+        width: 100%;
+       display: none; 
+    }
+    .nav-section{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .nav-link ul{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: block;  
+    }
+    .nav-link li{
+        text-align: center;
+    }
+    .nav-link li a{
+        padding: 0.5rem 1rem;
+    }
+    .nav-link.active{
+        display: flex;
     }
 }
